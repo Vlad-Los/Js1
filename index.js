@@ -1,14 +1,54 @@
 //задачи
 
-//конкатинация строк
 
-const firstName = 'Chelsy';
-const lastName = 'Emersld';
-const fullName = `${firstName}${lastName}`;
+// сейчас по людски пишеться так
 
-console.log(fullName);
+// const quantity = 15;
+// const orderMsq = 'Вы заказываете $ {quantity} холодильников.';
+
+// console.log (orderMsq)
 
 
+//Напиши скрипт которій выведет строку в формате
+//Гость x поселяется в z номер q
+//Подставив вместо x y z q значения переменны
+
+// Нормализация методом tolowerCase
+
+const brand = 'Samsung';
+const normalizedBrand = brand.toLocaleUpperCase();
+console.log(normalizedBrand);
+
+
+
+
+
+
+// //конкатинация строк
+
+// const firstName = 'Chelsy';
+// const lastName = 'Emersld';
+// // const fullName = firstName + ' ' + lastName;
+
+// // console.log(fullName);
+
+// const room = 716;
+// const type = 'VIP';
+
+// const welcomeMsg = `Гость ${firstName}  ${lastName} поселяеться в ${type} номер ${room}`;
+// console.log(welcomeMsg);
+
+
+// const welcomeMsg = 'Гость ' + 
+// firstName + 
+// ' ' + 
+// lastName + 
+// ' поселяеться в ' + 
+// type + 
+// ' номер ' + 
+// room;
+
+// console.log(welcomeMsg)
 
 
 
