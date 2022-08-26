@@ -1,5 +1,50 @@
 //задачи
 
+const x1 = 10;
+const x2 = 30;
+const Number = 15;
+
+console.log(`число ${Number} попадает в отрезок до ${x1}? `, Number < x1);
+
+
+console.log(`число ${Number} попадает в отрезок до ${x2}? `, Number > x2);
+
+const res1 = Number > x1 && Number < x2;
+
+console.log(`число ${Number} попадает в отрезок от ${x1}? до ${x2}? `,res1 );
+
+const res2 = Number < x1 || Number > x2;
+
+console.log(`число ${Number} попадает в отрезок от ${x1}? до ${x2}? `,res2 );
+
+
+//логическое и запинаеться на лжи либо полседний операнд
+// console.log(false && 10);
+
+//логическое или запинаеться на правде либо полседний операнд
+// console.log(5 || 10);
+
+//логическое не делаеи инверсию правда ложь ложь правда
+// console.log(!true);
+
+
+
+// const blacklistedWord1 = 'спам';
+// const blacklistedWord2 = 'распродажа';
+
+// const string1 = 'лаллалал сс  спам'
+// const string2 = 'лаллалал сс  РАСПРОДАЖА'
+// const string3 = 'лаллалал сс  рекламная кампания'
+
+// console.log(string1.includes(blacklistedWord1));
+// console.log(string1.includes(blacklistedWord2));
+
+// console.log(string2.includes(blacklistedWord1));
+// console.log(string2.toLowerCase(). includes(blacklistedWord2));
+
+// console.log(string3.includes(blacklistedWord1));
+// console.log(string3.includes(blacklistedWord2));
+
 
 // сейчас по людски пишеться так
 
@@ -15,9 +60,9 @@
 
 // Нормализация методом tolowerCase
 
-const brand = 'Samsung';
-const normalizedBrand = brand.toLocaleUpperCase();
-console.log(normalizedBrand);
+// const brand = 'Samsung';
+// const normalizedBrand = brand.toLocaleUpperCase();
+// console.log(normalizedBrand);
 
 
 
