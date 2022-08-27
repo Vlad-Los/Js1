@@ -1,21 +1,56 @@
 //задачи
 
-const x1 = 10;
-const x2 = 30;
-const Number = 15;
+//Тернарный оператор
 
-console.log(`число ${Number} попадает в отрезок до ${x1}? `, Number < x1);
+const balance = 1000;
+
+const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
+
+console.log (message);
 
 
-console.log(`число ${Number} попадает в отрезок до ${x2}? `, Number > x2);
+// const salary = 1500
+// if (salary <= 500){
 
-const res1 = Number > x1 && Number < x2;
+//     console.log ('Уровень1');
 
-console.log(`число ${Number} попадает в отрезок от ${x1}? до ${x2}? `,res1 );
+// } else if (salary > 500 && salary <= 1500) {
+//     console.log('Уровень 2');
+// } else if (salary > 1500 && salary < 3000) {
+//     console.log('Уровень 2');
+// } else {
+//     console.log('Уровень 4')
+// }
 
-const res2 = Number < x1 || Number > x2;
+//возможность открыть чат с пользователем
+//друг
+//онлайн
+//без режима не беспокоит
 
-console.log(`число ${Number} попадает в отрезок от ${x1}? до ${x2}? `,res2 );
+// const isOnline = true;
+// const isFriend = true;
+// const isDnd = false;
+
+// const canOpenChat = isOnline && isFriend && !isDnd;
+// console.log ('Можно открыть чат?', canOpenChat);
+
+
+// const x1 = 10;
+// const x2 = 30;
+// const Number = 15;
+
+// console.log(`число ${Number} попадает в отрезок до ${x1}? `, Number < x1);
+
+
+// console.log(`число ${Number} попадает в отрезок до ${x2}? `, Number > x2);
+
+// const res1 = Number > x1 && Number < x2;
+
+// console.log(`число ${Number} попадает в отрезок от ${x1}? до ${x2}? `,res1 );
+
+// const res2 = Number < x1 || Number > x2;
+
+// console.log(`число ${Number} попадает в отрезок от ${x1}? до ${x2}? `,res2 );
 
 
 //логическое и запинаеться на лжи либо полседний операнд
