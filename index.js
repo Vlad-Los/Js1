@@ -1,14 +1,184 @@
 //задачи
+//Напиши скрипт выбора отеля по количеству звезд
+//1 - 20$, 2-30$, 3-50$, 4-70$, 5-120$
+//задачи
+// const stars = 1;
+// let price;
+// if (stars === 1) {
+//   price = 20;
+// } else if (stars === 2) {
+//   price = 30;
+// } else if (stars === 3) {
+//   price = 50; 
+// }  else if (stars === 4) {
+//     price = 70;
+// }  else if (stars === 5) {
+//   price = 120;
+// } else {
+//   console.log (`Такого количества звезд нет`);
+// }
+// const stars = 1;
+// let price;
 
-//Тернарный оператор
+// switch (stars) {
+//   case 1:
+//     price = 20;
+//     break;
+//   case 2:
+//       price = 30;
+//       break;
+//   case 3:
+//       price = 500;
+//       break;
+//   case 4:
+//       price = 70;
+//       break;
+//   case 5:
+//       price = 120;
+//       break;
+// }
 
-const balance = 1000;
+// console.log(price);
+  
+// const stars = 1;
+// let price;
 
-const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
+// switch (stars) {
+//   case 1:
+//   case 2:
+//     price = 20;
+//     break;
+  
+//   case 3:
+//   case 4:
+//       price = 50;
+//       break;
+  
+//   case 5:
+//       price = 120;
+//       break;
+//   default:
+//     console.log (`Такого количества звезд нет`)
+// }
 
-console.log (message);
+// console.log(price);
+
+//задача на использование switch
+//в переменную message записать сообщение в зависимости от опции 
+//-Вы сможете забрать товар завтра с 12.00 в нашем офоисе
+//- Курьер доставит заказ завтра с 9.00 до 18.00
+//-Посылка будет отправлена сегодня
+//-Вам перезвонит менеджер
+
+// делаем переменные
+
+// const option = 123;
+// let message = '';
+
+// // делаем свитч 1 2 3
+
+// switch (option) {
+//   case 1:
+//     message = 'Вы сможете забрать товар завтра с 12.00 в нашем офисе';
+//     break;
+
+//   case 2:
+//       message = 'Курьер доставит заказ завтра с 9.00 до 18.00';
+//       break;  
+
+//   case 3:
+//         message = 'Посылка будет отпралена сегодня';
+//         break; 
+//   default:
+//     message = 'Вам перезвонит менеджер';
+
+// }
+
+// // делаем log message
+// console.log (message);
 
 
+// цикл for;
+
+// for (let i = 0; i < 5; i += 1) {
+//   console.log(i);
+// }
+// console.log ('dssdfd')
+
+// задача с циклом
+// скрипт подсчитвает зажачу работников
+// количество работников в переменнй employees
+// Зарплата каждого работника это случайное число от 500 до 5000
+// // записать сумму в переменную totalSalary и вывести в консоль
+
+// сделать вары
+
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employees = 12;
+// let totalSalary = 0;
+
+
+// // перебрать работников в цикле
+// for (let i = 1; i <= employees; i += 1) {
+//   // сгенерить случайную зп
+//   const salary = Math.round(Math.random()  * (maxSalary - minSalary) + minSalary,
+//   );
+//   console.log (`ЗП работника номер ${i} - $(salary)`);
+// // прибавить к Тоталу
+
+// totalSalary += salary;
+// // лог
+// console.log ('totalSalary: ', totalSalary);
+
+// }
+
+// написать скрипт который подсчитывает сумму всех четных чисел 
+// которые входят в диапазон переменных от min до max 
+// например если min=0 max = 5 і нем два четных числа 2 и 4 сумма 6
+
+const min = 6;
+const max = 13;
+
+let total = 0;
+
+// фор от мин до макс с шагом один проверяем остаток от деления
+
+for (let i = min; i<= max; i += 1) {
+  console.log (i)
+
+  if (i % 2 === 0) {
+    console.log ('четное; ', i);
+
+    total += i;
+  }
+}
+
+
+console.log ('total: ', total);
+
+
+//Тернарный оператор для простых записей или и или или
+
+// const balance = 1000;
+
+// const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
+
+// console.log (message);
+
+// function add(a, b, c) {
+//     // Change code below this line
+// console.log`(a + b + c) return;`
+  
+  
+//     // Change code above this line
+//   }
+  
+//   add(2, 5, 8); // 15
+  
+//   console.log(add(15, 27, 10));
+//   console.log(add(10, 20, 30));
+//   console.log(add(5, 10, 15));
 // const salary = 1500
 // if (salary <= 500){
 
