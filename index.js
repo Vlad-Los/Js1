@@ -204,7 +204,9 @@ if (totalSpent >= 100 && totalSpent < 1000){
   console.log ('Не партнер, скидка 0%');
 }
 
-paymant = paymant - paymant * discount;
+paymant -= paymant * discount;
+
+// paymant = paymant - paymant * discount;
 
 console.log(
   `Оформляем заказ на сумму ${paymant} со скидкой ${discount * 100}% `,
