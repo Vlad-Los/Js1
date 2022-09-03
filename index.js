@@ -186,36 +186,36 @@
 // В результате вывести сообщение 
 // "Оформляем заказ на сумму [сумма] со скидкой [ скидка ] %"
 
-let totalSpent = 200000;
-let paymant = 500;
-let discount = 0;
+// let totalSpent = 200000;
+// let paymant = 500;
+// let discount = 0;
 
-if (totalSpent >= 100 && totalSpent < 1000){
-  console.log ('Бронзовый партнер, скидка 2%');
-  discount = 0.02;
-} else if (totalSpent >= 1000 && totalSpent < 5000){
-  console.log ('Серебрянный партнер, скидка 5%');
-  discount = 0.05;
-} else if (totalSpent >= 5000 ){
-  console.log ('Золотой партнер, скидка 10%');
-  discount = 0.1;
+// if (totalSpent >= 100 && totalSpent < 1000){
+//   console.log ('Бронзовый партнер, скидка 2%');
+//   discount = 0.02;
+// } else if (totalSpent >= 1000 && totalSpent < 5000){
+//   console.log ('Серебрянный партнер, скидка 5%');
+//   discount = 0.05;
+// } else if (totalSpent >= 5000 ){
+//   console.log ('Золотой партнер, скидка 10%');
+//   discount = 0.1;
 
-} else {
-  console.log ('Не партнер, скидка 0%');
-}
+// } else {
+//   console.log ('Не партнер, скидка 0%');
+// }
 
-paymant -= paymant * discount;
+// paymant -= paymant * discount;
 
-// paymant = paymant - paymant * discount;
+// // paymant = paymant - paymant * discount;
 
-console.log(
-  `Оформляем заказ на сумму ${paymant} со скидкой ${discount * 100}% `,
-);
+// console.log(
+//   `Оформляем заказ на сумму ${paymant} со скидкой ${discount * 100}% `,
+// );
 
 
-totalSpent += paymant;
+// totalSpent += paymant;
 
-console.log( `Общая сумма потраченного в магазине: ${totalSpent}`);
+// console.log( `Общая сумма потраченного в магазине: ${totalSpent}`);
 
 
 
