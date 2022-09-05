@@ -151,20 +151,65 @@
 // ВАриант через for of
 
 
-const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
 
-// 1 переменная тотал
-let total = 0;
+// // 1 переменная тотал
+// let total = 0;
 
+// for (const number of numbers){
+//     console.log(number);
 
-for (const number of numbers){
-    console.log(number);
+// if (number % 2 === 0){
+//     console.log('Четное!!!!');
 
-if (number % 2 === 0){
-    console.log('Четное!!!!');
+//     total += number;
+// }
+// }
+// console.log('total:', total);
 
-    total += number;
+// -------------------------------------------
+// Вариант от обратного
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
+
+// // 1 переменная тотал
+// let total = 0;
+
+// for (const number of numbers){
+//     console.log(number);
+
+// if (number % 2 !== 0){
+//     console.log('Эту итерацию нужно пропустить', number);
+// continue;
+
+// }
+// console.log(`${number} - четное!!!!!` );
+// total += number;
+
+// }
+
+// console.log('total:', total);
+
+// ------------------------------------------
+
+// Напиши скрипт поиска логина
+// Если логина нет, вывести сообщение "Пользователь (логин) не найден"
+// Если найден логинб вывести сообщение "Пользователь (логин)  найден"
+
+// Сначала через For
+
+const logins = ['m4ngoDoge', 'kikwbab3st', 'polyscute, aj4xth3m4n'];
+const loginToFind = 'polyscute';
+let message = '';
+
+for(let i=0; i < logins.length; i +=1){
+    const login = logins[i];
+
+    if (login === loginToFind) {
+    message = `Пользователь ${loginToFind} найден.`;
+    break;
+    }
+    message = `Пользователь ${loginToFind} не найден.`;
+
 }
-}
-
-console.log('total:', total);
+console.log(message);
