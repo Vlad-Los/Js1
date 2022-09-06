@@ -274,12 +274,72 @@
 // Написать скрипт который обьеденит все елементы массива в одно строковое значение.
 // элементов произвольное количество
 // пусть элементы будут разделены запятой.
-const friends = ['Mango','Poly','Kivi','Ajax',];
-let string = '';
+// const friends = ['Mango','Poly','Kivi','Ajax',];
+// let string = '';
 
-for (const friend of friends) {
-    string += friend + ',';
+// for (const friend of friends) {
+//     string += friend + ',';
+// }
+
+// string = string.slice(0, string.length -1);
+// console.log(string);
+
+// ---------------------------то  же самое через метод join
+
+
+// const friends = ['Mango','Poly','Kivi','Ajax',];
+
+
+// const string = friends.join(',');
+// console.log(string);
+
+// -------Для сшития используеться этот регистр делать через join
+
+
+// Задача
+// Напишите скрипт который заменяет регистр каждоого символа  строке на противоположный
+// Напримерб если строка "JavaScript", то на віходе должна біть строка "JAVAsCript"/
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+
+// console.log(letters)
+
+// for (const letter of letters) {
+//     console.log(letter);
+
+// if (letter === letter.toLowerCase()){
+//     console.log('Эта буква в нижнем регистре!!! - ', letter);
+
+// invertedString += letter.toUpperCase();
+
+// } else {
+//     console.log('Эта буква в нижнем регистре!!! - ', letter);
+//     invertedString += letter.toLowerCase();
+// }
+
+// }
+
+// console.log(invertedString);
+
+// Более кортокое решение через тернавник
+
+const string = 'JavaScript';
+const letters = string.split('');
+let invertedString = '';
+
+console.log(letters)
+
+for (const letter of letters) {
+    console.log(letter);
+
+    const isEqual = letter === letter.toLowerCase();
+
+    invertedString += isEqual
+    
+    ? letter.toUpperCase()
+    : letter.toLowerCase ();
 }
 
-console.log(string.slice(0, string.length -1));
-console.log(string);
+    console.log('invertedString', invertedString);
