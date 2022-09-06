@@ -198,18 +198,88 @@
 
 // Сначала через For
 
-const logins = ['m4ngoDoge', 'kikwbab3st', 'polyscute, aj4xth3m4n'];
-const loginToFind = 'polyscute';
-let message = '';
+// const logins = ['m4ngoDoge', 'kikwbab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+// let message = `Пользователь ${loginToFind} не найден.`;
 
-for(let i=0; i < logins.length; i +=1){
-    const login = logins[i];
+// for(let i=0; i < logins.length; i +=1){
+//     const login = logins[i];
 
-    if (login === loginToFind) {
-    message = `Пользователь ${loginToFind} найден.`;
-    break;
-    }
-    message = `Пользователь ${loginToFind} не найден.`;
+//     console.log('login:',login);
 
+//     console.log(`${login} === ${loginToFind}:`, login === loginToFind);
+
+//     if (login === loginToFind) {
+//     console.log('Ура, равны!!!!');
+//     message = `Пользователь ${loginToFind} найден.`;
+//     break;
+//     }
+    
+// }
+// console.log(message);
+
+// -------------------------------for off
+// const logins = ['m4ngoDoge', 'kikwbab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+// let message = `Пользователь ${loginToFind} не найден.`;
+
+
+// for (const login of logins) {
+
+// console.log('login:',login);
+
+//     console.log(`${login} === ${loginToFind}:`, login === loginToFind);
+
+//     if (login === loginToFind) {
+//     console.log('Ура, равны!!!!');
+//     message = `Пользователь ${loginToFind} найден.`;
+//     break;
+//     }
+    
+// }
+// console.log(message);
+
+// --------------------------------------- 
+// самый простоц способ узнать есть он в масиеве или нет через inclubes
+// самое лушее решение
+
+// const logins = ['m4ngoDoge', 'kikwbab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+
+
+// const message = logins.includes(loginToFind)
+// ?`Пользователь ${loginToFind} найден.`
+// :`Пользователь ${loginToFind} найден.`;
+
+// console.log(message);
+    
+
+// ----------------------------------------------
+// Напиши скрипт поиска самого маленького числа в массиве,
+// при условии что числа уникальные  (не повторяються).
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers){
+//     console.log(number);
+// if(number < smallestNumber) {
+//     smallestNumber = number;
+// }
+// }
+
+// console.log('smallestNumber:',smallestNumber);
+
+// ----------------------------------------------
+// Написать скрипт который обьеденит все елементы массива в одно строковое значение.
+// элементов произвольное количество
+// пусть элементы будут разделены запятой.
+const friends = ['Mango','Poly','Kivi','Ajax',];
+let string = '';
+
+for (const friend of friends) {
+    string += friend + ',';
 }
-console.log(message);
+
+console.log(string.slice(0, string.length -1));
+console.log(string);
