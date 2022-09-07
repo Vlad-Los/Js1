@@ -325,21 +325,127 @@
 
 // Более кортокое решение через тернавник
 
-const string = 'JavaScript';
-const letters = string.split('');
-let invertedString = '';
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
 
-console.log(letters)
+// console.log(letters)
 
-for (const letter of letters) {
-    console.log(letter);
+// for (const letter of letters) {
+//     console.log(letter);
 
-    const isEqual = letter === letter.toLowerCase();
+//     const isEqual = letter === letter.toLowerCase();
 
-    invertedString += isEqual
+//     invertedString += isEqual
     
-    ? letter.toUpperCase()
-    : letter.toLowerCase ();
-}
+//     ? letter.toUpperCase()
+//     : letter.toLowerCase ();
+// }
 
-    console.log('invertedString', invertedString);
+//     console.log('invertedString', invertedString);
+
+// -------------------------------------------------
+// Делаем slug в url из названия стратьи
+// Заголовок статьи состоит только из букв и пробелов
+
+// - Нормализуем строку
+// - разбиваем по словам
+// - сшиваем в строку с разделителем
+// Должно поучиться top-10-benefitis-of-react-framework
+// const title = 'Top 10 benefits of React framework';
+// const normalizedTitle = title.toLowerCase();
+// const words = normalizedTitle.split(' ');
+
+
+// const slug = words.join('-');
+
+
+// const slug1 = title.toLocaleLowerCase().split(' ').join('-');
+
+// console.log(slug1);
+
+// -------------------------
+// Напиши скрипт который считает сумму элементов двух массивов.
+
+const array1 = [5, 10, 15, 20];
+
+const array2 = [10, 20, 30];
+
+let total = 0;
+
+// _______Плохой вариант но рабочий
+
+// for(let i = 0; i < array1.length; i+= 1){
+//     total += array1[i];
+// }
+// for(let i = 0; i < array2.length; i+= 1){
+//         total += array2[i];
+// }
+
+// console.log(total);
+
+// __________________
+
+// Хороший варинат
+
+// const numbers = array1.concat(array2);
+// console.log(numbers);
+
+// for (const number of numbers ){
+//     total += number;
+// }
+
+// console.log(total);
+
+// ---------------------------------
+
+/* - Работаем с коллекцией карточек в trello
+/*-  метод spice
+* - удалить 
+* - добавить
+* - Обновить
+*/
+
+const cards = [
+    'Карточка-1',
+    'Карточка-2',
+    'Карточка-3',
+    'Карточка-4',
+    'Карточка-5',
+];
+
+console.table(cards);
+
+// Удаление по индексу
+
+// const cardToRemove = 'Карточка-3';
+// const index = cards.indexOf(cardToRemove);
+
+// console.log(index);
+// cards.splice(index,1);
+
+// console.table(cards);
+//-----------------------------------
+
+// ДОбавление по индексу
+
+// const cardToInsert = 'Карточка-6';
+// const index = 3;
+
+// cards.splice(3, 0, cardToInsert);
+
+// console.table(cards);
+
+// Обновление по индексу
+
+const cardToUpdate = 'Карточка-4';
+const index = cards.indexOf(cardToUpdate);
+
+console.log(index);
+
+cards.splice(index, 1, 'Обновленная карточка 4');
+
+console.table(cards);
+
+
+
