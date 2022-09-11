@@ -157,18 +157,136 @@
 
 
 
-const changeCase = function(string) {
-    const letters = string.split('');
-    let invertedString = '';
+// const changeCase = function(string) {
+//     const letters = string.split('');
+//     let invertedString = '';
 
-    for(const letter of letters){
-        const isInLowerCase = letter === letter.toLowerCase();
-        invertedString += isEqual ? letter.toUpperCase(); letter.toLowerCase();
+//     for(const letter of letters){
+//         const isInLowerCase = letter === letter.toLowerCase();
+//         invertedString += isEqual ? letter.toUpperCase(); letter.toLowerCase();
+//     }
+
+//     return invertedString;
+// };
+
+// console.log (changeCase('dfgdfGGG'));
+// console.log (changeCase('DKJFHDkkkkhs'));
+// console.log (changeCase('dKDJFSADKllllddd'));
+
+// --------------------------------------------------
+// Напиши функцию slugify (string) которая получает строку и возвращает URL - slug
+// Cтрока сосотит только из букв и пробелов
+
+// const title = 'Top 10 benefits of React framework';
+
+// const words = normalizedTitle.split(' ');
+// const slug = words.join ('-');
+
+// const slug1 = title.toLowerCase().split(' ').join('-');
+
+// console.log (slug1);
+
+
+// const slugify = function (string) {
+
+//     return string.toLowerCase().split(' ').join('-');
+
+// };
+
+// console.log(slugify('Top 10 benefits of react'));
+// console.log(slugify('Best 10 benefits of react'));
+// console.log(slugify('10 benefits of react'));
+
+// ----------------------------------------------
+// Псевдомассив arguments и Array.from и ......
+// Олдскульный метод
+
+// const fn = function(){
+
+//     console.log(arguments);
+
+//     const args = Array.from(arguments)
+
+//     console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5, 6);
+// fn(1, 2, 3, 4, 5, 6, 7, );
+
+// -----------------------------
+// Прогрессивный метод
+
+// const fn = function(...args){
+
+//     console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5, 6);
+// fn(1, 2, 3, 4, 5, 6, 7, );
+
+
+// -------------------------------
+// віделение аргументов до массива
+
+// const fn = function(...args){
+//     console.log('${a} ${b} ${c}');
+//     console.log(args);
+// };
+
+// fn('sdsd',1, 2, 3);
+// fn('sdsdsd',1, 2, 3, 4, 5, 6);
+// fn('ccvbvbc',1, 2, 3, 4, 5, 6, 7, );
+
+// -------------------------------------
+// Напиши функцию add для сложения определенного количества аргументов 
+//  -- Операция ... (rest)
+
+// const add = function (...args) {
+//     console.log(args);
+
+//     let total = 0;
+
+//     for(const arg of args){
+//         total+=arg;
+//     }
+//     return total;
+// };
+
+// console.log (add(1, 2, 3));
+// console.log (add(1, 2, 3, 5, 6));
+
+// -----------------------------------
+// Напиши функцию filterNumbers [, number1, ...] которая;
+// - первый аргумент принимает масиив чисел
+// - после первого аргумента может быть произвольное количество других аругментов
+// которые будут числами
+// -функция должна вернуть новы массив в которм бубудт только аргументы начиная с второго
+// для которых есть аналог в оригинальном масииве
+
+const filterNumbers = function (array,...args) {
+console.log('array:', array);
+console.log('args', args);
+const uniqueElements = [];
+
+for (const element of array){
+
+    if (args.includes(element)){
+        uniqueElements.push(element);
+        console.log(`$(element) есть везде!!`)
     }
 
-    return invertedString;
+
+
+    
+}
+
+console.log(uniqueElements);
 };
 
-console.log (changeCase('dfgdfGGG'));
-console.log (changeCase('DKJFHDkkkkhs'));
-console.log (changeCase('dKDJFSADKllllddd'));
+console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+console.log(filterNumbers([10, 20, 30, 40, 50], 110, 30, 21, 31, 50));
+console.log(filterNumbers([100, 200, 300, 400, 500], 10, 15, 200, 3, 8));
+
+
