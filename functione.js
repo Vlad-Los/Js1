@@ -235,6 +235,10 @@
 //     console.log(args);
 // };
 
+
+
+
+
 // fn('sdsd',1, 2, 3);
 // fn('sdsdsd',1, 2, 3, 4, 5, 6);
 // fn('ccvbvbc',1, 2, 3, 4, 5, 6, 7, );
@@ -265,28 +269,78 @@
 // -функция должна вернуть новы массив в которм бубудт только аргументы начиная с второго
 // для которых есть аналог в оригинальном масииве
 
-const filterNumbers = function (array,...args) {
-console.log('array:', array);
-console.log('args', args);
-const uniqueElements = [];
+// const filterNumbers = function (array,...args) {
+// console.log('array:', array);
+// console.log('args', args);
+// const uniqueElements = [];
 
-for (const element of array){
+// for (const element of array){
 
-    if (args.includes(element)){
-        uniqueElements.push(element);
-        console.log(`$(element) есть везде!!`)
-    }
+//     if (args.includes(element)){
+//         uniqueElements.push(element);
+//         console.log(`$(element) есть везде!!`)
+//     }
 
 
 
     
+// }
+
+// console.log(uniqueElements);
+// };
+
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+// console.log(filterNumbers([10, 20, 30, 40, 50], 110, 30, 21, 31, 50));
+// console.log(filterNumbers([100, 200, 300, 400, 500], 10, 15, 200, 3, 8));
+
+
+
+// let message;
+
+//   if (password === ADMIN_PASSWORD) {
+//   console.log("Welcome!");
+//     return;
+
+//     message = "Access denied, wrong password!";
+// if (password !== ADMIN_PASSWORD) {
+//   console.log("Access denied, wrong password!");
+//     return;
+    
+//   }
+
+//   return message;
+//   // Change code above this line
+// }
+// if (amount === 0) {
+//     console.log("Для проведения операции введите сумму больше нуля");
+//     return;
+//   }
+
+
+//   const totalPrice = orderedQuantity * pricePerItem;
+
+//   // Change code above this line
+//   return totalPrice;
+// };
+
+// calculateTotalPrice(5, 100);
+// calculateTotalPrice(8, 60);
+// calculateTotalPrice(3, 400);
+// calculateTotalPrice(1, 3500);
+// calculateTotalPrice(12, 70);
+
+function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+    // Change code below this line
+
+consol.log ('You ordered droids worth ${message} price credits Delivery ${deliveryFee} credits) is included in total price');
+
+  message = orderedQuantity * pricePerDroid + deliveryFee;
+    
+    // Change code above this line
+    return message;
 }
 
-console.log(uniqueElements);
-};
 
-console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
-console.log(filterNumbers([10, 20, 30, 40, 50], 110, 30, 21, 31, 50));
-console.log(filterNumbers([100, 200, 300, 400, 500], 10, 15, 200, 3, 8));
-
-
+makeOrderMessage(2, 100, 50);
+makeOrderMessage(4, 300, 100);
+makeOrderMessage(10, 70, 200);

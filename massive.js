@@ -367,11 +367,11 @@
 // -------------------------
 // Напиши скрипт который считает сумму элементов двух массивов.
 
-const array1 = [5, 10, 15, 20];
+// const array1 = [5, 10, 15, 20];
 
-const array2 = [10, 20, 30];
+// const array2 = [10, 20, 30];
 
-let total = 0;
+// let total = 0;
 
 // _______Плохой вариант но рабочий
 
@@ -401,20 +401,20 @@ let total = 0;
 
 /* - Работаем с коллекцией карточек в trello
 /*-  метод spice
-* - удалить 
-* - добавить
-* - Обновить
-*/
+// * - удалить 
+// * - добавить
+// * - Обновить
+// */
 
-const cards = [
-    'Карточка-1',
-    'Карточка-2',
-    'Карточка-3',
-    'Карточка-4',
-    'Карточка-5',
-];
+// const cards = [
+//     'Карточка-1',
+//     'Карточка-2',
+//     'Карточка-3',
+//     'Карточка-4',
+//     'Карточка-5',
+// ];
 
-console.table(cards);
+// console.table(cards);
 
 // Удаление по индексу
 
@@ -447,5 +447,14 @@ console.table(cards);
 
 // console.table(cards);
 
-
-
+function checkPassword(password) {
+    const ADMIN_PASSWORD = "jqueryismyjam";
+    if (password !== ADMIN_PASSWORD) {
+        return "Access denied, wrong password!";
+    }
+    return "Welcome!";
+}
+    
+    checkPassword("mangohackzor");
+    checkPassword("polyhax");
+    checkPassword("jqueryismyjam");
