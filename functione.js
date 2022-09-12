@@ -332,7 +332,7 @@
 function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
     // Change code below this line
 
-consol.log ('You ordered droids worth ${message} price credits Delivery ${deliveryFee} credits) is included in total price');
+console.log ('You ordered droids worth ${message} price credits Delivery ${deliveryFee} credits) is included in total price');
 
   message = orderedQuantity * pricePerDroid + deliveryFee;
     
