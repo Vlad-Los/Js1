@@ -329,18 +329,46 @@
 // calculateTotalPrice(1, 3500);
 // calculateTotalPrice(12, 70);
 
-function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+// function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+//   // Change code below this line
+
+//  return `You ordered droids worth ${orderedQuantity * pricePerDroid + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+  
+//   }
+
+// makeOrderMessage(2, 100, 50);
+// makeOrderMessage(4, 300, 100);
+// makeOrderMessage(10, 70, 200);
+
+function checkStorage(available, ordered) {
+    let message;
     // Change code below this line
+   if (available >= ordered) { // Change this line
+    message = "Order is processed, our manager will contact you.";
+    } else {
+    message = "Not enough goods in stock!";
+    }
 
-console.log ('You ordered droids worth ${message} price credits Delivery ${deliveryFee} credits) is included in total price');
-
-  message = orderedQuantity * pricePerDroid + deliveryFee;
-    
+    return message;
+}
     // Change code above this line
     return message;
 }
+  
+  checkStorage(100, 50);
+  checkStorage(100, 130);
+  checkStorage(200, 20);
+  checkStorage(200, 150); 
+  checkStorage(150, 180);
 
 
-makeOrderMessage(2, 100, 50);
-makeOrderMessage(4, 300, 100);
-makeOrderMessage(10, 70, 200);
+  function checkIfCanAccessContent(subType) {
+    const canAccessContent = subType = pro || subType = vip ; // Change this line
+  
+    return canAccessContent;
+  }
+  
+  checkIfCanAccessContent("pro");
+  checkIfCanAccessContent("starter");
+  checkIfCanAccessContent("vip");
+  checkIfCanAccessContent("free");

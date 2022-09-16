@@ -485,4 +485,58 @@
 // let quantity = prompt ( "Введите количество товаров");
 // quantity = Number(quantity);
 // console.log(quantity);
-// console.log(typeof quantity);
+// // console.log(typeof quantity);
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam";
+//     // Change code below this line
+//     switch(password)
+//     {
+//     case null:
+//       return 'Canceled by user!'; 
+   
+//     case ADMIN_PASSWORD:
+//         return 'Welcome!';
+        
+//     default:
+//       return "Access denied, wrong password!"; 
+//     }
+//   }
+  
+//   checkPassword("mangohackzor");
+//   checkPassword(null);
+//   checkPassword("polyhax");
+//   checkPassword("jqueryismyjam");
+
+
+  function getShippingCost(country) {
+    let message;
+    // Change code below this line
+  
+   switch(country)
+    {
+        case "Australia" :
+        price = 170;
+        break;
+        case "China" :
+        
+        
+        price = 100;
+        case "Chile" :
+        price = 250;
+        case "Jamaica" :
+        price = 120;
+         
+  default: "Sorry, there is no delivery to your country"
+        
+    }
+   return  `Shipping to ${country} will cost ${price} credits`; 
+  }
+    // Change code above this line
+    return message;
+  }
+  getShippingCost("Australia");
+  getShippingCost("Germany");
+  getShippingCost("China");
+  getShippingCost("Jamaica");
+  getShippingCost("Sweden");
