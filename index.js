@@ -507,36 +507,61 @@
 //   checkPassword(null);
 //   checkPassword("polyhax");
 //   checkPassword("jqueryismyjam");
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
+// switch(country){
 
+//   case China:
+//   price = 100;
+//   return message;
 
-  function getShippingCost(country) {
-    let message;
-    // Change code below this line
+//   case Chile:
+//   price = 250;
+//   return message;
+
+//   case Australia:
+//   price = 100;
+//   return message;
+
+//   case Jamaica:
+//   price = 100;
+//   return message;
+    
   
-   switch(country)
-    {
-        case "Australia" :
-        price = 170;
-        break;
-        case "China" :
-        
-        
-        price = 100;
-        case "Chile" :
-        price = 250;
-        case "Jamaica" :
-        price = 120;
-         
-  default: "Sorry, there is no delivery to your country"
-        
-    }
-   return  `Shipping to ${country} will cost ${price} credits`; 
-  }
-    // Change code above this line
-    return message;
-  }
-  getShippingCost("Australia");
-  getShippingCost("Germany");
-  getShippingCost("China");
-  getShippingCost("Jamaica");
-  getShippingCost("Sweden");
+//   default:
+//     return "Sorry, there is no delivery to your country";
+
+
+    
+    
+// }
+//   // Change code above this line
+//   return message = `Shipping to ${country} will cost ${price} credits";
+// }
+
+// getShippingCost("Australia")
+// getShippingCost("Germany");
+// getShippingCost("China");
+// getShippingCost("Chile");
+// getShippingCost("Jamaica");
+// getShippingCost("Sweden");
+
+
+
+
+function formatMessage(message, maxLength) {
+  let result=""+message;
+  if(result.length >= maxLength) result = result.slice (0, maxLength)+"...";  
+  
+    console.log(result + ' = '+result.length);
+    console.log(maxLength);
+  return result;
+}
+
+formatMessage("Curabitur ligula sapien", 16);
+formatMessage("Curabitur ligula sapien", 23);
+formatMessage("Vestibulum facilisis purus nec", 20);
+formatMessage("Vestibulum facilisis purus nec", 30);
+formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);

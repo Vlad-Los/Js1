@@ -340,35 +340,35 @@
 // makeOrderMessage(4, 300, 100);
 // makeOrderMessage(10, 70, 200);
 
-function checkStorage(available, ordered) {
-    let message;
-    // Change code below this line
-   if (available >= ordered) { // Change this line
-    message = "Order is processed, our manager will contact you.";
-    } else {
-    message = "Not enough goods in stock!";
-    }
+// function checkStorage(available, ordered) {
+//     let message;
+//     // Change code below this line
+//    if (available >= ordered) { // Change this line
+//     message = "Order is processed, our manager will contact you.";
+//     } else {
+//     message = "Not enough goods in stock!";
+//     }
 
-    return message;
-}
-    // Change code above this line
-    return message;
-}
+//     return message;
+// }
+//     // Change code above this line
+//     return message;
+// }
   
-  checkStorage(100, 50);
-  checkStorage(100, 130);
-  checkStorage(200, 20);
-  checkStorage(200, 150); 
-  checkStorage(150, 180);
+//   checkStorage(100, 50);
+//   checkStorage(100, 130);
+//   checkStorage(200, 20);
+//   checkStorage(200, 150); 
+//   checkStorage(150, 180);
 
 
-  function checkIfCanAccessContent(subType) {
-    const canAccessContent = subType = pro || subType = vip ; // Change this line
+//   function checkIfCanAccessContent(subType) {
+//     const canAccessContent = subType = pro || subType = vip ; // Change this line
   
-    return canAccessContent;
-  }
+//     return canAccessContent;
+//   }
   
-  checkIfCanAccessContent("pro");
-  checkIfCanAccessContent("starter");
-  checkIfCanAccessContent("vip");
-  checkIfCanAccessContent("free");
+//   checkIfCanAccessContent("pro");
+//   checkIfCanAccessContent("starter");
+//   checkIfCanAccessContent("vip");
+//   checkIfCanAccessContent("free");
