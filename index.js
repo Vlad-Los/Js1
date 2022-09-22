@@ -552,10 +552,7 @@
 
 function formatMessage(message, maxLength) {
   let result=""+message;
-  if(result.length >= maxLength) result = result.slice (0, maxLength)+"...";  
-  
-    console.log(result + ' = '+result.length);
-    console.log(maxLength);
+  if (result.length >= maxLength) result = result.slice (0, maxLength)+"...";  
   return result;
 }
 

@@ -447,14 +447,33 @@
 
 // console.table(cards);
 
-function checkPassword(password) {
-    const ADMIN_PASSWORD = "jqueryismyjam";
-    if (password !== ADMIN_PASSWORD) {
-        return "Access denied, wrong password!";
-    }
-    return "Welcome!";
-}
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam";
+//     if (password !== ADMIN_PASSWORD) {
+//         return "Access denied, wrong password!";
+//     }
+//     return "Welcome!";
+// }
     
-    checkPassword("mangohackzor");
-    checkPassword("polyhax");
-    checkPassword("jqueryismyjam");
+//     checkPassword("mangohackzor");
+//     checkPassword("polyhax");
+//     checkPassword("jqueryismyjam");
+
+    function calculateTotal(number) {
+        // Change code below this line
+    
+    for (let i = 0; i <= number ; i+=1 ){
+        let sum = 0;
+        sum = sum + i;
+        return sum;
+    }
+    
+         // Change code above this line
+    }
+    
+    calculateTotal(1);
+    calculateTotal(3);
+    calculateTotal(7);
+    calculateTotal(18);
+    calculateTotal(24);
+    calculateTotal();
