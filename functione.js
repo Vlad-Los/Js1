@@ -372,3 +372,71 @@
 //   checkIfCanAccessContent("starter");
 //   checkIfCanAccessContent("vip");
 //   checkIfCanAccessContent("free");
+
+
+// _________________________________________________________
+
+// Определение самого длинного слова в строке
+
+// function findLongestWord(string) {
+//     // Change code below this line
+
+// var strSplit = string.split(' ');
+
+//     console.log (strSplit);
+
+// var longestWord="";
+
+//     for(var i = 0; i < strSplit.length; i++){
+//       if(strSplit[i].length > longestWord.length) { // If strSplit[i].length больше, чем сравнимое слово...
+//       longestWord = strSplit[i]; // ...затем longestWord принимает новое значение
+//     }
+//     }
+
+//     // Change code above this line
+//     return longestWord;
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+// findLongestWord("Google do a roll");
+// findLongestWord("May the force be with you");
+
+
+function getCommonElements(array1, array2) {
+    // Change code below this line
+const newArray = [];
+    for(let i = 0; i < array1.length; i++){
+    for(let j = 0; j < array1.length; j++){
+if (array1[i].includes(array2[j])){
+        }
+      }
+    }
+  
+    return newArray.push(i);
+   // Change code above this line
+  }
+  getCommonElements([1, 2, 3], [2, 4]);
+  getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+  getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+  getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+  getCommonElements([1, 2, 3], [10, 20, 30]);
+
+
+
+  function getCommonElements(array1, array2) {
+    // Change code below this line
+  const newArray = [];
+  
+  for (let i = 0; i < array1.length; i += 1)
+    { for (let j = 0; j < array2.length; j += 1) {
+      if (array1[i].includes (array2[j])){ 
+        
+        return newArray.push(i); } } } }
+  
+    
+  
+  getCommonElements([1, 2, 3], [2, 4]);
+  getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+  getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+  getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+  getCommonElements([1, 2, 3], [10, 20, 30]);

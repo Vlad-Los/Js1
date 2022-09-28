@@ -459,21 +459,36 @@
 //     checkPassword("polyhax");
 //     checkPassword("jqueryismyjam");
 
-    function calculateTotal(number) {
-        // Change code below this line
+    // function calculateTotal(number) {
+    //     // Change code below this line
     
-    for (let i = 0; i <= number ; i+=1 ){
-        let sum = 0;
-        sum = sum + i;
-        return sum;
-    }
+    // for (let i = 0; i <= number ; i+=1 ){
+    //     let sum = 0;
+    //     sum = sum + i;
+    //     return sum;
+    // }
     
-         // Change code above this line
-    }
+    //      // Change code above this line
+    // }
     
-    calculateTotal(1);
-    calculateTotal(3);
-    calculateTotal(7);
-    calculateTotal(18);
-    calculateTotal(24);
-    calculateTotal();
+    // calculateTotal(1);
+    // calculateTotal(3);
+    // calculateTotal(7);
+    // calculateTotal(18);
+    // calculateTotal(24);
+    // calculateTotal();
+
+
+    // function calculateTotalPrice(order) {
+    //     let total = 0;
+    //     // Change code below this line
+    //   for(let i = 0; i < order.length; i+= 1){
+    //    total += order[i];
+    //   }
+      
+    //     return total;
+    //   }
+    //   calculateTotalPrice([12, 85, 37, 4]);
+    //   calculateTotalPrice([164, 48, 291]);
+    //   calculateTotalPrice([412, 371, 94, 63, 176]);
+    //   calculateTotalPrice();
