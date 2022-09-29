@@ -232,12 +232,202 @@
 
 // console.log(getFriendsByOnlineStatus(friends));
 // _____________________________________________
+// считаем количество свойств в обьектеь р
 
-const x = {
-    a: 1,
-    b: 2,
-    c: 50,
-    d: 100,
+
+// const x = {
+//     a: 1,
+//     b: 2,
+//     c: 50,
+//     d: 100,
+// };
+
+// console.log (Object.keys(x).length);
+
+// __________________________________________________
+// Операция spread (распыление)
+
+// const numbers = [...[1,2,3],4,5];
+// console.log(numbers);
+
+// __________________________________________________
+// пример поиск самой большой или маленькой температуры
+// const temps =[18,24,12,29,31,40];
+
+// console.log(Math.max(1,4,7,10,6));
+// console.log(Math.min(...temps));
+
+// const a = [{a:1}, {b:2}, {c:3}];
+
+// const b = [...a];
+
+// console.log('a:',a);
+// console.log('b:',b);
+
+// console.log(a[0] === b[0]);
+// console.log(a === b);
+// ----------------------------------------
+// Сливаем несколько массивов в дин через concat и spread
+
+// const lastWeekTemps = [1,2,3];
+// const currentTemps = [4,5,6];
+// const nextWeekTemps = [7,8,9];
+
+// const xx = lastWeekTemps.concat(currentTemps, nextWeekTemps);
+
+// const allTEmps = [ ...lastWeekTemps, ...currentTemps, ...nextWeekTemps];
+// console.log(allTEmps);
+// -----------------------------------------------
+// Распыление обьектов assign - старый варинат spread - новый
+
+// const a = {x: 1, y: 2};
+// const b = {x: 0, z: 3};
+
+// const z = Object.assign({}, a, b);
+
+// console.log(z);
+
+// const c = {
+//     ...a,
+//     ...b,
+// };
+
+// console.log(c);
+
+// ------------------------------------
+// Пример применения
+// const defaultSetting = {
+//     theme: 'Light',
+//     showNotifications: true,
+//     hideSidebar: false,
+// };
+
+// const userSetting = {
+//     showNotifications: false,
+//     hideSidebar: true,
+// };
+
+// const finalSetting = {
+//     ...defaultSetting,
+//     ...userSetting,
+// };
+
+// console.log(finalSetting);
+
+// -----------------------------------
+// Деструктуризация обьектов
+// const playlist = {
+//         rating: 5,
+//         tracks: ['трек1', 'трек2','трек3'],
+//         trackCount: 3,
+//         };
+    
+// const {
+//     rating,
+//     tracks,
+//     trackCount : numberOffTracks = 0,
+// } = playlist;
+
+// console.log(
+// numberOffTracks
+// );
+
+// console.log(rating);
+// console.log(tracks);
+// console.log(trackCount);
+// ________________________________________
+// Глубокая дестректуризация
+// const profile = {
+//     name:'Jacques Gluke',
+//     tag: 'khgkfg',
+//     location:'kafjgkjfhgkagh',
+//     avatar: 'dkksfhkdshfkd',
+//     stats:{
+//         followers: 5603,
+//         views: 4827,
+//         likes:454,
+//     },
+
+// };
+// const {
+//     name,
+//     tag,
+//     location,
+//     avatar,
+//     stats: {followers, views, likes},
+// } = profile;
+
+
+
+// console.log(name, tag, location, avatar,followers, views,likes);
+
+// -----------------------------------------------
+// Деструктуризация массива
+// const rgb = [255, 100, 80];
+// const [red, green, blue] = rgb;
+
+// console.log(red, green, blue);
+// __________________________________
+// Пример
+// const authors = {
+//     kikwi: 4,
+//     poly: 7,
+//     ajax: 9,
+//     mango: 6,
+// };
+
+// const entries = Object.entries(authors);
+
+// for (const [name,rating] of entries){
+// console.log(name, rating);
+
+// }
+
+// -------------------------------------
+// Операция  rest (сбор)
+// const profile = {
+//     name:'Jacques Gluke',
+//     tag: 'khgkfg',
+//     location:'kafjgkjfhgkagh',
+//     avatar: 'dkksfhkdshfkd',
+//     stats:{
+//         followers: 5603,
+//         views: 4827,
+//         likes:454,
+//     },
+
+// };
+
+// const{ name, tag, location, ...restProps} = profile;
+// console.log(name, tag, location);
+// console.log(restProps);
+
+// ___________________________________________________
+// Паттерн Обьект настроек 
+// деструктуризация параметра обьекта в подписи функции
+// rest при деструкторизации в подписи
+
+const showProfileInfo = function( {
+    name,
+    tag,
+    location,
+    avatar,
+    stats: {followers, views, likes},
+}){
+    console.log(name,tag,location,avatar,followers,views,likes);
 };
 
-console.log (Object.keys(x).length);
+const profile = {
+    name:'Jacques Gluke',
+    tag: 'khgkfg',
+    location:'kafjgkjfhgkagh',
+    avatar: 'dkksfhkdshfkd',
+    stats:{
+        followers: 5603,
+        views: 4827,
+        likes:454,
+    },
+
+};
+
+showProfileInfo(profile);
