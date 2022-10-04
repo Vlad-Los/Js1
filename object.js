@@ -436,80 +436,175 @@
 // ____________________________________________
 // Работа с корзиной товаров
 
-const cart = {
-    items: [],
-    getItems() {
-        return this.items;
-    },
-    add(product) {
-        for (const item of this.items){
-            console.log(item);
-            if (item.name === product.name){
-                item.quantity += 1;
-                return;
-            }
-        }
+// const cart = {
+//     items: [],
+//     getItems() {
+//         return this.items;
+//     },
+//     add(product) {
+//         for (const item of this.items){
+//             console.log(item);
+//             if (item.name === product.name){
+//                 item.quantity += 1;
+//                 return;
+//             }
+//         }
 
     
 
-        const newProduct = {
-            ...product,
-            quantity: 1,
-        };
-        this.items.push(newProduct);
-    },
-    remove(productName) {
-        const { items } = this;
-        for(let i = 0; i < items.length; i += 1){
-            const { name} = items[i];
+//         const newProduct = {
+//             ...product,
+//             quantity: 1,
+//         };
+//         this.items.push(newProduct);
+//     },
+//     remove(productName) {
+//         const { items } = this;
+//         for(let i = 0; i < items.length; i += 1){
+//             const { name} = items[i];
 
-            if(productName === name){
-                console.log('Нашли такой продукт' ,productName);
-                console.log('индекс: ',i);
+//             if(productName === name){
+//                 console.log('Нашли такой продукт' ,productName);
+//                 console.log('индекс: ',i);
 
-                items.splice(i,1);
-            }
-        }
-    },
-    clear() {},
-    countTotalPrice() {
-        const{ items } = this;
+//                 items.splice(i,1);
+//             }
+//         }
+//     },
+//     clear() {},
+//     countTotalPrice() {
+//         const{ items } = this;
 
-        let total = 0;
+//         let total = 0;
 
-        for (const { price, quantity } of items){
-            total += price * quantity;
-        }
+//         for (const { price, quantity } of items){
+//             total += price * quantity;
+//         }
 
-        return total;
-    },
-    increaseQuantity(productName) {},
-    decreaseQuantity(productName) {},
-};
+//         return total;
+//     },
+//     increaseQuantity(productName) {},
+//     decreaseQuantity(productName) {},
+// };
 
-console.log(cart.getItems());
-
-cart.add({name: 'apple', price: 50});
-cart.add({name: 'limone', price: 50});
-cart.add({name: 'limone', price: 50});
-cart.add({name: 'pear', price: 50});
-cart.add({name: 'pear', price: 50});
-cart.add({name: 'pear', price: 50});
-
-
-
-console.table(cart.getItems());
-
-cart.remove('apple');
-console.table(cart.getItems());
-
-// cart.clear();
 // console.log(cart.getItems());
 
-console.log('Total: ', cart.countTotalPrice());
+// cart.add({name: 'apple', price: 50});
+// cart.add({name: 'limone', price: 50});
+// cart.add({name: 'limone', price: 50});
+// cart.add({name: 'pear', price: 50});
+// cart.add({name: 'pear', price: 50});
+// cart.add({name: 'pear', price: 50});
 
-const getProductTotalPrice = function({price, quantity}){
-    return price * quantity;
-};
 
-console.log(getProductTotalPrice(cart.items[2]));
+
+// console.table(cart.getItems());
+
+// cart.remove('apple');
+// console.table(cart.getItems());
+
+// // cart.clear();
+// // console.log(cart.getItems());
+
+// console.log('Total: ', cart.countTotalPrice());
+
+// const getProductTotalPrice = function({price, quantity}){
+//     return price * quantity;
+// };
+
+// console.log(getProductTotalPrice(cart.items[2]));
+// -----------------------------------------
+// добавление свойства в обьект
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+  
+// };
+
+// // Change code below this line
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = { country:"Jamaica", city: "Kingston" };
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   // Change code below this line
+// if (apartment.hasOwnProperty(key)) {
+//     console.log(key);
+//     console.log(apartment[key]);}
+//   keys.push(key);
+//   values.push(apartment[key]);
+//   [keys] : "descr", "rating", "price",
+//   [values]:"Spacious apartment in the city center", 4, 2153
+
+//   // Change code above this line
+// }
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);  
+//   }
+// }
+// console.log("own properies="+keys);
+// console.log(values);
+
+// ----------------------------------
+// Перебери объект apartment используя метод Object.keys()
+//  и цикл for...of. Запиши в переменную keys массив ключей
+//   собственных свойств объекта apartment,
+//  и добавь в массив values все значения его свойств.
+
+
+
+// const apartment = {
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+// };
+// const values = [];
+//   // Change code below this line
+//     const keys = Object.keys(apartment);
+//     for (const key of keys) {
+//     values.push(apartment[key]);
+// }
+function countProps(object) {
+    let propCount = 0;
+    const keys = Object.keys(object);
+    for (const key of keys)
+    if (object.hasOwnProperty(key))
+        propCount += 1;
+    return propCount;
+}
+
+console.log(countProps({}));
+  countProps({ name: "Mango", age: 2 });
+  countProps({ mail: "poly@mail.com", isOnline: true, score: 500 });
