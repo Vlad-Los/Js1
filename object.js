@@ -596,15 +596,74 @@
 //     for (const key of keys) {
 //     values.push(apartment[key]);
 // }
-function countProps(object) {
-    let propCount = 0;
-    const keys = Object.keys(object);
-    for (const key of keys)
-    if (object.hasOwnProperty(key))
-        propCount += 1;
-    return propCount;
-}
+// function countProps(object) {
+//     let propCount = 0;
+//     const keys = Object.keys(object);
+//     for (const key of keys)
+//         if (object.hasOwnProperty(key))
+//             propCount += 1;
+//     return propCount;
+// }
 
-console.log(countProps({}));
-  countProps({ name: "Mango", age: 2 });
-  countProps({ mail: "poly@mail.com", isOnline: true, score: 500 });
+// console.log(countProps({}));
+//   countProps({ name: "Mango", age: 2 });
+//   countProps({ mail: "poly@mail.com", isOnline: true, score: 500 });
+
+// ________________________________________________________________________
+
+// Напиши функцию getProductPrice(productName) которая принимает один параметр 
+// productName - название продукта. Функция ищет объект продукта с таким именем (свойство name)
+// в массиве products и возвращает его цену (свойство price).
+// Если продукт с таким названием не найден, функция должна возвращать null.
+
+
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+//   function getProductPrice(productName) {
+//     // Change code below this line
+
+//     for (const item of products) {
+//       if (item.name === productName)
+//         return item.price;
+//     }
+//     return null;
+//     // Change code above this lin 
+//   }
+
+//   getProductPrice("Radar");
+//   getProductPrice("Grip");
+//   getProductPrice("Scanner");
+//   getProductPrice("Droid");
+//   getProductPrice("Engine");
+
+const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 }
+  ];
+  
+  function getAllPropValues(propName) {
+    // Change code below this line
+    let vals=[]; // итоговый массив значений
+    for (const product of products) { // берем по очереди каждый объект из массива
+      const keys = Object.keys(product); // берем ключи взятого объекта
+      for (const key of keys) { // проходим по его ключам
+        if (propName === key) { // если переданное имя ключа совпало с текущим
+          vals.push(product[key]); // то добавили его значение в итоговый массив
+          break;
+        }
+      }
+    }
+    return vals; // вернули из функции массив
+    // Change code above this line
+  }
+  console.log(getAllPropValues("name"));
+  getAllPropValues("quantity");
+  getAllPropValues("price");
+  getAllPropValues("category");
