@@ -755,16 +755,30 @@
   //   calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} });
   //   calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} });
 
-  function add(...args) {
-    let total = 0;
-    for (const arg of args){
-      total += args;
-    }
+  // function add(...args) {
+  //   let total = 0;
+  //   for (const arg of args){
+  //     total += args;
+  //   }
     
-    return total;
-    // Change code above this line
-  }
-  add(15, 27);
-  add(12, 4, 11, 48);
-  add(32, 6, 13, 19, 8);
-  add(74, 11, 62, 46, 12, 36);
+  //   return total;
+  //   // Change code above this line
+  // }
+  // add(15, 27);
+  // add(12, 4, 11, 48);
+  // add(32, 6, 13, 19, 8);
+  // add(74, 11, 62, 46, 12, 36);
+
+  const bookShelf = {
+    books: ["The last kingdom", "Haze", "The guardian of dreams"],
+    updateBook(oldName, newName) {
+      // Change code below this line
+      const bookIndex = this.books.indexOf(oldName);
+      this.books.splice(bookIndex, 1, newName);
+      // Change code above this line
+    },
+  };
+  bookShelf.updateBook("Haze", "Dungeon chronicles");
+  bookShelf.updateBook("Dungeon chronicles", "Haze");
+  bookShelf.updateBook("The last kingdom", "Dune");
+  
