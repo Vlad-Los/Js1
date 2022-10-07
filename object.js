@@ -641,29 +641,130 @@
 //   getProductPrice("Droid");
 //   getProductPrice("Engine");
 
-const products = [
-    { name: "Radar", price: 1300, quantity: 4 },
-    { name: "Scanner", price: 2700, quantity: 3 },
-    { name: "Droid", price: 400, quantity: 7 },
-    { name: "Grip", price: 1200, quantity: 9 }
-  ];
+
+// ---------------------------------------------------------
+// Напиши функцию getAllPropValues(propName) которая принимает один параметр propName - имя (ключ) свойства. 
+// Функция должна вернуть массив всех значений свойства с таким именем из каждого объекта в массиве products.
+//  Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
+
+
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 }
+//   ];
   
-  function getAllPropValues(propName) {
-    // Change code below this line
-    let vals=[]; // итоговый массив значений
-    for (const product of products) { // берем по очереди каждый объект из массива
-      const keys = Object.keys(product); // берем ключи взятого объекта
-      for (const key of keys) { // проходим по его ключам
-        if (propName === key) { // если переданное имя ключа совпало с текущим
-          vals.push(product[key]); // то добавили его значение в итоговый массив
-          break;
-        }
-      }
+//   function getAllPropValues(propName) {
+//     // Change code below this line
+//     let vals=[]; // итоговый массив значений
+//     for (const product of products) { // берем по очереди каждый объект из массива
+//       const keys = Object.keys(product); // берем ключи взятого объекта
+//       for (const key of keys) { // проходим по его ключам
+//         if (propName === key) { // если переданное имя ключа совпало с текущим
+//           vals.push(product[key]); // то добавили его значение в итоговый массив
+//           break;
+//         }
+//       }
+//     }
+//     return vals; // вернули из функции массив
+//     // Change code above this line
+//   }
+//   console.log(getAllPropValues("name"));
+//   getAllPropValues("quantity");
+//   getAllPropValues("price");
+//   getAllPropValues("category");
+
+// _____________________________________________
+
+// Напиши функцию calculateTotalPrice(productName)
+//  которая принимает один параметр productName - название товара. 
+//  Функция должна вернуть общую стоимость (цена * количество)
+//   товара с таким именем из массива products.
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+  
+//   function calculateTotalPrice(productName) {
+//     // Пиши код ниже этой строки
+  
+//   for (const product of products){
+//   let totalPrice = product.price * product.quantity;
+//     if (productName === product.name){
+//       return totalPrice; 
+//     }
+//   }
+//   return 0;
+//   }
+  
+
+// const colors = [
+//     { hex: "#f44336", rgb: "244,67,54" },
+//     { hex: "#2196f3", rgb: "33,150,243" },
+//     { hex: "#4caf50", rgb: "76,175,80" },
+//     { hex: "#ffeb3b", rgb: "255,235,59" },
+//   ];
+  
+//   const hexColors = [];
+//   const rgbColors = [];
+//   // Change code below this line
+  
+//   for (const {hex, rgb} of colors) {
+//   const {hex, rgb} = colors; 
+//     hexColors.push(colors.hex);
+//     rgbColors.push(colors.rgb);
+//   }
+  
+
+  // const forecast = {
+  //   today: {
+  //     low: 28,
+  //     high: 32,
+  //     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+  //   },
+  //   tomorrow: {
+  //     low: 27,
+  //     high: 31,
+  //   },
+  // };
+  // // Change code below this line
+  
+  
+  // const {
+  //   today: {low, high, icon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg" },
+  //   tomorrow: {low, high},
+  // } = forecast;
+
+  
+  // function calculateMeanTemperature(forecast) {
+  
+  //   const {
+  //     today: {low: todayLow, high: todayHigh},
+  //     tomorrow: {low: tomorrowLow, high: tomorrowHigh} = forecast;
+      
+  //     }
+      
+  //     // Change code above this line
+  //     return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+  //   }
+
+
+  //   calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} });
+  //   calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} });
+
+  function add(...args) {
+    let total = 0;
+    for (const arg of args){
+      total += args;
     }
-    return vals; // вернули из функции массив
+    
+    return total;
     // Change code above this line
   }
-  console.log(getAllPropValues("name"));
-  getAllPropValues("quantity");
-  getAllPropValues("price");
-  getAllPropValues("category");
+  add(15, 27);
+  add(12, 4, 11, 48);
+  add(32, 6, 13, 19, 8);
+  add(74, 11, 62, 46, 12, 36);
