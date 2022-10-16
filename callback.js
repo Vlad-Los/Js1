@@ -158,21 +158,21 @@
 
 
 
-const rounder = function(places){
-return function(number){
-    return Number (number.toFixed(places));
-};
+// const rounder = function(places){
+// return function(number){
+//     return Number (number.toFixed(places));
+// };
     
-};
+// };
 
-const rounder2 = rounder(2);
-const rounder3 = rounder(3);
+// const rounder2 = rounder(2);
+// const rounder3 = rounder(3);
 
-console.dir(rounder2);
-console.dir(rounder3);
+// console.dir(rounder2);
+// console.dir(rounder3);
 
 
-console.log (rounder2(3.45878, 3));
-console.log (rounder3(3.45878, 2));
-console.log (rounder3(5.45878, 3));
-console.log (rounder3(3.45878, 3));
+// console.log (rounder2(3.45878, 3));
+// console.log (rounder3(3.45878, 2));
+// console.log (rounder3(5.45878, 3));
+// console.log (rounder3(3.45878, 3));
