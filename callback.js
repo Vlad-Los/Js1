@@ -176,3 +176,48 @@
 // console.log (rounder3(3.45878, 2));
 // console.log (rounder3(5.45878, 3));
 // console.log (rounder3(3.45878, 3));
+
+
+// const pizzaPalace = {
+//     pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//     order(pizzaName, onSuccess, onError) {
+//       if (!this.pizzas.includes(pizzaName))
+//         return onError(pizzaName);
+//       return onSuccess(pizzaName);
+//     },
+//   };
+//   // Change code above this line
+  
+//   // Callback for onSuccess
+//   function makePizza(pizzaName) {
+//     return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+//   }
+  
+//   // Callback for onError
+//   function onOrderError(pizzaName) {
+//     return `Error! There is no pizza with a name ${pizzaName} in the assortment.`;
+//   }
+
+//   // Method calls with callbacks
+//   pizzaPalace.order('Smoked', makePizza, onOrderError);
+//   pizzaPalace.order('Four meats', makePizza, onOrderError);
+//   pizzaPalace.order('Big Mike', makePizza, onOrderError);
+//   pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+
+function calculateTotalPrice(orderedItems) {
+    let totalPrice = 0;
+    // Change code below this line
+orderedItems.forEach(function(value, index) {
+    totalPrice += +value;
+});
+    
+    }
+
+    // Change code above this line
+    return totalPrice;
+
+
+calculateTotalPrice([12, 85, 37, 4]);
+calculateTotalPrice([164, 48, 291]);
+calculateTotalPrice([412, 371, 94, 63, 176]);
