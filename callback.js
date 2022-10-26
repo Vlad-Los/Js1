@@ -205,19 +205,43 @@
 //   pizzaPalace.order('Vienna', makePizza, onOrderError);
 
 
-function calculateTotalPrice(orderedItems) {
-    let totalPrice = 0;
-    // Change code below this line
-orderedItems.forEach(function(value, index) {
-    totalPrice += +value;
-});
+// function calculateTotalPrice(orderedItems) {
+//     let totalPrice = 0;
+//     // Change code below this line
+// orderedItems.forEach(function(value, index) {
+//     totalPrice += +value;
+// });
     
-    }
+//     }
 
-    // Change code above this line
-    return totalPrice;
+//     // Change code above this line
+//     return totalPrice;
 
 
-calculateTotalPrice([12, 85, 37, 4]);
-calculateTotalPrice([164, 48, 291]);
-calculateTotalPrice([412, 371, 94, 63, 176]);
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+// function filterArray(numbers, value) {
+//     const filteredNumbers = [];
+//     // Change code below this line
+
+    
+//     filterArray.forEach(function (numbers) {
+    
+//     if (numbers[i] > value) {
+//         filteredNumbers.push(numbers[i]);
+//     }
+//     }
+
+//     // Change code above this line
+//     return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 38);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+
+// Change code above this line
