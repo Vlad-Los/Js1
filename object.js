@@ -784,119 +784,155 @@
   
 
  
-const aaa=
-[
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male"
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female"
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male"
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female"
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
-    isActive: true,
-    balance: 3951,
-    gender: "male"
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
-    isActive: false,
-    balance: 1498,
-    gender: "male"
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female"
-  }
-];
+// const aaa=
+// [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ];
 
-// Change code below this line
-const getUsersWithEyeColor = (users, color) =>
-{
-  return users.filter(user=> user.eyeColor == color)
-};
-const arr=getUsersWithEyeColor(aaa, 'blue');
-console.log(arr);
+// // Change code below this line
+// const getUsersWithEyeColor = (users, color) =>
+// {
+//   return users.filter(user=> user.eyeColor == color)
+// };
+// const arr=getUsersWithEyeColor(aaa, 'blue');
+// console.log(arr);
 
-  const atTheOldToad = {
-    potions: [
-      { name: "Speed potion", price: 460 },
-      { name: "Dragon breath", price: 780 },
-      { name: "Stone skin", price: 520 },
-    ],
-    // Change code below this line
+//   const atTheOldToad = {
+//     potions: [
+//       { name: "Speed potion", price: 460 },
+//       { name: "Dragon breath", price: 780 },
+//       { name: "Stone skin", price: 520 },
+//     ],
+//     // Change code below this line
    
-    getPotions() {
-      return this.potions;
-    },
-    addPotion(newPotion) {
-      for (const item of this.potions)
-        if (item.name==newPotion.name)    
-          return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     getPotions() {
+//       return this.potions;
+//     },
+//     addPotion(newPotion) {
+//       for (const item of this.potions)
+//         if (item.name==newPotion.name)    
+//           return `Error! Potion ${newPotion.name} is already in your inventory!`;
   
-      this.potions.push(newPotion);
-    },
-    removePotion(potionName) {
-      for (let i=0; i<this.potions.length; ++i)
-        if (this.potions[i].name==potionName) {
-          this.potions.splice(i, 1);
-          return;
-        }
-       return `Potion ${potionName} is not in inventory!`;
-    },
+//       this.potions.push(newPotion);
+//     },
+//     removePotion(potionName) {
+//       for (let i=0; i<this.potions.length; ++i)
+//         if (this.potions[i].name==potionName) {
+//           this.potions.splice(i, 1);
+//           return;
+//         }
+//        return `Potion ${potionName} is not in inventory!`;
+//     },
     
-    updatePotionName(oldName, newName) {
-      for (let i=0; i<this.potions.length; ++i)
-        if (this.potions[i].name==oldName) {
-          this.potions[i].name=newName;
-          return;
-        }
-      return `Potion ${oldName} is not in inventory!`;
-    },
-    // Change code above this line
-  };
+//     updatePotionName(oldName, newName) {
+//       for (let i=0; i<this.potions.length; ++i)
+//         if (this.potions[i].name==oldName) {
+//           this.potions[i].name=newName;
+//           return;
+//         }
+//       return `Potion ${oldName} is not in inventory!`;
+//     },
+//     // Change code above this line
+//   };
   
-  atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
-  atTheOldToad.removePotion("Dragon breath");
-  atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion");
+//   atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+//   atTheOldToad.removePotion("Dragon breath");
+//   atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion");
+
+// const calculateTotalBalance = users.reduce(
+//   (totalBalance, user) => 
+//    return totalBalance + user.balance,
+//   0;
+//    );
+
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+// Change code below this line
+
+const sortedByAuthorName = [...books].sort((firstAuthor, secondAuthor) => firstAuthor.author.localCompare(secondAuthor.author));
+
+const sortedByReversedAuthorName = [...books].sort((firstAuthor, secondAuthor) => secondAuthor.author.localCompare(firstAuthor.author));
+
+const sortedByAscendingRating = [...books].sort((firstRating, secondRaiting) => firstRating.score - secondRaiting.score);
+
+const sortedByDescentingRating = [...books].sort((firstRating, secondRaiting) => secondRaiting.score - firstRating.score );
